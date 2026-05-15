@@ -1,0 +1,286 @@
+/* Custom Utility Classes */
+.text-outline {
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.4);
+}
+
+.text-outline:hover {
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 1);
+  transition: 0.3s ease;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #000000;
+  color: #f3f4f6;
+  font-family: "Schibsted Grotesk", sans-serif;
+  letter-spacing: -0.01em;
+}
+
+h1,
+h2,
+h3,
+h4,
+.font-black,
+.font-bold {
+  font-family: "Schibsted Grotesk", sans-serif;
+  letter-spacing: -0.03em;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+::-webkit-scrollbar-thumb {
+  background: #333;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Button Styles */
+.btn-explore {
+  display: inline-block;
+  padding: 12px 24px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.btn-explore:hover {
+  border-color: white;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Portfolio & Education Accordion */
+.portfolio-item,
+.education-item {
+  overflow: hidden;
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition:
+    max-height 0.5s ease-in-out,
+    opacity 0.5s ease-in-out;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.accordion-content.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.portfolio-item,
+.education-item {
+  transition: background-color 0.3s ease;
+  background-color: transparent;
+}
+
+.portfolio-item:hover,
+.education-item:hover {
+  background-color: transparent;
+}
+
+.portfolio-item.active,
+.education-item.active {
+  background-color: transparent;
+}
+
+.portfolio-item.active h3,
+.education-item.active h3 {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.portfolio-item:hover .item-number,
+.education-item:hover .item-number {
+  color: #ffffff;
+}
+
+/* FLOATING IMAGE PREVIEW */
+#hover-preview {
+  position: fixed;
+  pointer-events: none;
+  z-index: 100;
+  width: 256px; /* w-64 - persegi */
+  height: 256px; /* h-64 - persegi */
+  overflow: hidden;
+  opacity: 0;
+  transform: scale(0.9);
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+}
+
+.preview-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+#hover-preview img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(100%);
+  transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+#hover-preview img.incoming {
+  transform: translateY(100%);
+}
+
+#hover-preview img.outgoing {
+  transform: translateY(-100%);
+}
+
+.portfolio-item.active h3 {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.outline-text {
+  -webkit-text-stroke: 2px rgba(255, 255, 255, 0.8);
+  color: transparent;
+  transition: -webkit-text-stroke 0.5s ease;
+}
+
+#hero-name-scroll.outline-text {
+  -webkit-text-stroke: 3px white;
+}
+
+.portfolio-item:hover .item-number {
+  color: #ffffff;
+}
+
+/* Premium Sienna-style Hero Section */
+#hero-name {
+  pointer-events: none;
+  mix-blend-mode: difference;
+  z-index: 40;
+}
+
+#hero-info {
+  z-index: 10;
+  pointer-events: none;
+}
+
+.hero-image-item {
+  position: relative;
+  z-index: 10;
+  transition: transform 1.2s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* KUNCI UTAMA: Hilangkan semua stacking context yang menghalangi percampuran warna */
+#skills,
+#about,
+#portfolio,
+section,
+.container {
+  isolation: auto !important;
+}
+
+/* Biarkan animasi hero tetap jalan */
+/* Julian David Style - Lens Blur & Premium Typography */
+:root {
+  --premium-ease: cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.hero-image-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition:
+    transform 2s var(--premium-ease),
+    filter 2s var(--premium-ease);
+}
+
+/* Efek Blur saat tidak dihover atau saat scroll - Kecuali Foto Utama */
+.hero-image-item img {
+  transition:
+    filter 0.6s cubic-bezier(0.23, 1, 0.32, 1),
+    transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.hero-image-item:not(.is-main):not(:hover) img {
+  filter: blur(8px) brightness(0.7) grayscale(0.2);
+  transform: scale(1.1);
+}
+
+.hero-image-item.is-main img {
+  filter: blur(0px) brightness(1) grayscale(0) !important;
+  transform: scale(1) !important;
+}
+
+.hero-image-item:hover img {
+  filter: blur(0px) brightness(1) grayscale(0) !important;
+  transform: scale(1.05) !important;
+  z-index: 10;
+}
+
+#hero-name {
+  pointer-events: none;
+  mix-blend-mode: difference;
+  z-index: 40;
+  opacity: 0;
+  filter: blur(10px);
+  transform: translate(-50%, -45%) scale(0.95);
+  transition:
+    opacity 1.8s var(--premium-ease),
+    transform 1.8s var(--premium-ease),
+    filter 1.8s var(--premium-ease) !important;
+}
+
+#hero-name.active {
+  opacity: 1;
+  filter: blur(0px);
+  transform: translate(-50%, -50%) scale(1);
+}
+
+#hero-info p {
+  letter-spacing: 0.2em;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+#nav-menu {
+  /* Initial state: full width */
+  max-width: 100%;
+}
+
+#nav-menu.compact {
+  /* Target state: compact size */
+  max-width: 400px; /* Atur sesuai kebutuhan agar rapat */
+  gap: 2rem;
+}
+
+.reveal-word {
+  display: inline-block;
+  color: rgba(255, 255, 255, 0.1) !important;
+  transition: color 0.4s ease;
+  margin-right: 0.25em;
+}
+
+.reveal-word.active {
+  color: rgba(255, 255, 255, 1) !important;
+}
