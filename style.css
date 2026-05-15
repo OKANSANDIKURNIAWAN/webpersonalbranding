@@ -284,3 +284,37 @@ section,
 .reveal-word.active {
   color: rgba(255, 255, 255, 1) !important;
 }
+
+/* Marquee Animation */
+.marquee-container {
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 15%,
+    black 85%,
+    transparent
+  );
+}
+
+.marquee-content {
+  display: flex;
+  width: fit-content;
+  animation: marquee 25s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-text {
+  font-family: "Schibsted Grotesk", sans-serif;
+  font-style: italic;
+  opacity: 0.6;
+  mix-blend-mode: overlay;
+  white-space: nowrap;
+}
