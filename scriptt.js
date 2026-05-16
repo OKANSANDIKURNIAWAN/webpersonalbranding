@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
       item.addEventListener("mousemove", (e) => {
         preview.style.left = `${e.clientX + 20}px`;
         preview.style.top = `${e.clientY + 20}px`;
-        preview.style.opacity = "1";
+        preview.style.opacity = "0.7";
         preview.style.transform = "scale(1)";
       });
 
@@ -133,7 +133,7 @@ document.addEventListener("DOMContentLoaded", () => {
       item.addEventListener("mousemove", (e) => {
         preview.style.left = `${e.clientX + 20}px`;
         preview.style.top = `${e.clientY + 20}px`;
-        preview.style.opacity = "1";
+        preview.style.opacity = "0.7";
         preview.style.transform = "scale(1)";
       });
 

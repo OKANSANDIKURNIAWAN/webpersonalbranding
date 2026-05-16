@@ -112,13 +112,48 @@ h4,
   color: #ffffff;
 }
 
+/* EDUCATION ACCORDION ANIMATIONS */
+.education-item {
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.education-item h3 {
+  transition:
+    color 0.8s ease,
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.education-item:hover h3 {
+  color: #ffffff !important;
+}
+
+.education-item:hover .accordion-icon {
+  transform: rotate(45deg);
+  color: #ffffff;
+}
+
+.accordion-content {
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.education-item.active .accordion-content {
+  max-height: 500px;
+  opacity: 1;
+  margin-top: 10px;
+}
+
+.education-item.active .accordion-icon {
+  transform: rotate(45deg);
+  color: #ffffff;
+}
+
 /* FLOATING IMAGE PREVIEW */
 #hover-preview {
   position: fixed;
   pointer-events: none;
   z-index: 100;
-  width: 256px; /* w-64 - persegi */
-  height: 256px; /* h-64 - persegi */
+  width: 160px; /* Reduced from 256px */
+  height: 160px; /* Reduced from 256px */
   overflow: hidden;
   opacity: 0;
   transform: scale(0.9);
