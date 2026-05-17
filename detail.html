@@ -1,0 +1,692 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Detail | Okan Sandi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .fade-up {
+        animation: fadeUp 0.8s ease-out forwards;
+      }
+
+      .scrollbar-hide {
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+      }
+
+      .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+      }
+
+      /* Smooth scroll behavior */
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+    <script src="script.js"></script>
+    <script>
+      const projectData = {
+        iot: {
+          title: "Smart Building & Parking",
+          year: "2025",
+          category: "IoT Project",
+          tag: "ESP32 IoT Solution",
+          mainRole: "Project leader, Iot developer, and Hardware Assembly",
+          mainImage: "foto.jpg/Smart Building & Smart Parking.jpg",
+          description:
+            "Project miniatur smart building berbasis IoT yang digunakan untuk simulasi monitoring parkir dan kontrol perangkat otomatis menggunakan ESP32 dan sensor.",
+          roles: [
+            "Project Leader",
+            "ESP32 Programming",
+            "Sensor Integration",
+            "Hardware Assembly",
+          ],
+          tools: ["ESP32", "Arduino IDE", "Blynk", "Figma"],
+          gallery: [
+            "foto.jpg/IoT/1 iot.jpeg",
+            "foto.jpg/IoT/2 iot.jpeg",
+            "foto.jpg/IoT/3 iot.jpeg",
+            "foto.jpg/IoT/4 iot.jpeg",
+            "foto.jpg/IoT/5 iot.jpeg",
+            "foto.jpg/IoT/6 iot.jpeg",
+            "foto.jpg/IoT/7 iot.jpeg",
+          ],
+          challenge:
+            "Tantangan terbesar dalam project ini adalah menghubungkan sensor dengan sistem monitoring agar data dapat tampil secara realtime.",
+          links: {
+            "View Powerpoint":
+              "https://drive.google.com/file/d/19zzqwoYsCZTmLTWEJPtUQeTdeHymok2_/view?usp=sharing",
+          },
+          web: {
+            title: "Web Film & Series",
+            year: "2026",
+            category: "Web Development",
+            tag: "Netflix Clone Style",
+            mainRole: "Front-end Developer",
+            mainImage: "foto.jpg/webbb.png",
+            description:
+              "Platform informasi film dan series Indonesia 2025-2026 dengan desain modern dan responsif.",
+            roles: [
+              "Frontend Integration",
+              "UI Finishing",
+              "Project Integration",
+            ],
+            tools: ["HTML", "Tailwind CSS", "JavaScript", "Figma"],
+            gallery: [
+              "foto.jpg/web/28_XI SIJA 2_Okan Sandi Kurniawan_Userflow Kelompok 2.jpg",
+              "foto.jpg/web/Screenshot 2026-05-17 194516.png",
+              "foto.jpg/web/Untitled.png",
+            ],
+            challenge:
+              "Melalui project ini saya belajar mengenai pengembangan antarmuka website yang lebih responsif dan fetch data dari API.",
+            links: {
+              "View Website": "https://webfilm-gules.vercel.app/index.html",
+              "GitHub Repo":
+                "https://github.com/OKANSANDIKURNIAWAN/okn-webpp.git",
+              "View Wireframe": "https://canva.link/ow0d3r4jjm4nymv",
+              "View Figma Design":
+                "https://www.figma.com/design/sdOT0YWe1qz6iilFlMag4n/Cinmoev---film-and-series?node-id=0-1&t=hmgR6OwahHaa8Brx-1",
+            },
+          },
+          networking: {
+            title: "IT Essential (Cisco)",
+            year: "2024",
+            category: "Networking",
+            tag: "Cisco Certified Course",
+            mainRole: "Student / Specialist",
+            mainImage: "foto.jpg/Screenshot 2026-05-16 195636.png",
+            description:
+              "Sertifikasi dan pelatihan mendalam mengenai fondasi IT, perakitan hardware, dan dasar-dasar jaringan komputer dari Cisco Networking Academy.",
+            roles: [
+              "Hardware Assembly",
+              "Network Troubleshooting",
+              "OS Installation",
+            ],
+            tools: ["Cisco Packet Tracer", "VirtualBox", "Hardware Tools"],
+            gallery: ["foto.jpg/terjemahan.png"],
+            challenge:
+              "Memahami kompleksitas troubleshooting hardware dan konfigurasi jaringan dasar secara presisi.",
+            links: {
+              "View Certificate":
+                "https://drive.google.com/file/d/1xaFpqre-_V5UHETEpS8jbRDcPdun259v/view?usp=sharing",
+              "View Task":
+                "https://drive.google.com/file/d/158wAgc-zuGeefb8Tv8yH7QvKaelx7fJI/view?usp=sharing",
+            },
+          },
+          design: {
+            title: "Design Brief & Visuals",
+            year: "2025",
+            category: "Design Project",
+            tag: "Graphic Design",
+            mainRole: "Lead Designer",
+            mainImage: "foto.jpg/logo brief.png",
+            description:
+              "Pembuatan materi visual dan brief desain untuk kebutuhan presentasi.",
+            roles: ["Visual Identity", "Layout Design", "Color Theory"],
+            tools: ["Canva", "Ibis Paint X"],
+            gallery: ["foto.jpg/Acipa’s Delight Cookies.png"],
+            challenge:
+              "Menyelaraskan estetika visual dengan keinginan klient serta pesan yang ingin disampaikan dan agar mudah dipahami audiens.",
+            links: {
+              "Open PDF":
+                "https://drive.google.com/file/d/159OIgYyYrmlCRGvVg4kkX03-pvH3DHIq/view?usp=sharing",
+            },
+          },
+          podcast: {
+            title: "Podcast Production",
+            year: "2025",
+            category: "Media",
+            tag: "Audio Production",
+            mainRole: "Producer & Editor",
+            mainImage: "foto.jpg/podcast spill.jpegfoto.jpg/KI NARTO SABDO.png",
+            description:
+              "Produksi podcast bertema budaya dan sejarah, mencakup proses rekaman hingga editing audio final.",
+            roles: ["Script Writing", "Audio Editing"],
+            tools: ["Audacity", "Adobe Audition", "Canva (Poster)"],
+            gallery: [
+              "foto.jpg/podcast/WhatsApp Image 2026-05-17 at 10.47.15 (2).jpeg",
+              "foto.jpg/podcast/WhatsApp Image 2026-05-17 at 10.47.15.jpeg",
+              "foto.jpg/podcast/SPILL THE TEA.png",
+            ],
+            challenge:
+              "Menghasilkan kualitas audio yang jernih dan narasi yang menarik untuk didengar.",
+            links: {
+              "Watch on YouTube":
+                "https://youtu.be/mOANwkRPT2Q?si=J7LoI84LLcsEpLdk",
+            },
+          },
+          mcm: {
+            title: "Math City Map (MCM)",
+            year: "2024",
+            category: "Achievement",
+            tag: "Math Competition",
+            mainRole: "Participant",
+            mainImage: "foto.jpg/sertifikat mcm.jpeg",
+            description:
+              "Kompetisi matematika berbasis lokasi yang menggabungkan kemampuan analisis matematika dengan penjelajahan lapangan. Lomba ini diadakan di Taman Raden Saleh, sekaligus merayakan hari Pendidikan Nasional.",
+            roles: ["Problem Solver", "Team Strategy"],
+            tools: ["MCM App", "Scientific Calculator"],
+            gallery: [
+              "foto.jpg/MCM/1 mcm.jpeg",
+              "foto.jpg/MCM/2 mcm.jpeg",
+              "foto.jpg/MCM/3 mcm.jpeg",
+              "foto.jpg/MCM/4 mcm.jpeg",
+              "foto.jpg/MCM/5 mcm.jpeg",
+            ],
+            challenge:
+              "Menyelesaikan persoalan matematika kompleks dalam waktu terbatas di lokasi yang berbeda-beda.",
+          },
+          solve: {
+            title: "Solve Education",
+            year: "2024",
+            category: "Certificate",
+            tag: "Education Program",
+            mainRole: "Student",
+            mainImage: "foto.jpg/solve education.jpeg",
+            description:
+              "Program pendidikan digital yang fokus pada pengembangan skill Bahasa Inggrismelalui platform game-based learning. Saya mendapatkan penghargaan sebagai siswa yang aktif belajar secara konsisten se-Kota Semarang. Selain itu saya juga pernah mendapatkan Juara 1 kategori kelas 8 SMP",
+            roles: ["Learning Participation", "Skill Development"],
+            tools: ["Solve Education Platform"],
+            gallery: [
+              "foto.jpg/solve education/1 (1).jpeg",
+              "foto.jpg/solve education/1 (2).jpeg",
+              "foto.jpg/solve education/1 (3).jpeg",
+            ],
+            challenge:
+              "Konsistensi dalam menyelesaikan modul pembelajaran dan mencapai target skor yang ditentukan.",
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-black text-white font-['Schibsted_Grotesk'] antialiased">
+    <!-- Navigation -->
+    <nav
+      class="fixed top-0 w-full z-50 px-6 md:px-10 py-6 flex justify-between items-center bg-black/50 backdrop-blur-md border-b border-zinc-900"
+    >
+      <a href="index.html" class="flex items-center gap-2">
+        <div
+          class="w-8 h-8 bg-white rounded-lg flex items-center justify-center"
+        >
+          <span class="text-black font-black text-xl leading-none">O</span>
+        </div>
+        <div class="text-2xl font-black tracking-tighter">OKAN SANDI</div>
+      </a>
+      <a
+        href="projects.html"
+        class="text-xs uppercase tracking-[0.3em] font-bold hover:text-zinc-400 transition-colors"
+        >Back to Projects</a
+      >
+    </nav>
+
+    <!-- 1. HERO TITLE SECTION -->
+    <header class="px-6 md:px-16 pt-12 md:pt-20 pb-16 md:pb-24">
+      <div class="max-w-7xl mx-auto">
+        <div
+          class="fade-up"
+          style="opacity: 0; animation: fadeUp 0.8s ease-out 0.2s forwards"
+        >
+          <p
+            id="project-category-year"
+            class="text-xs uppercase tracking-[0.5em] text-zinc-500 mb-4"
+          >
+            CATEGORY • YEAR
+          </p>
+          <h1
+            id="project-title"
+            class="text-5xl md:text-7xl lg:text-8xl font-black uppercase tracking-tight mb-8 leading-none"
+          >
+            PROJECT TITLE
+          </h1>
+          <p
+            id="project-description"
+            class="text-lg md:text-xl text-zinc-400 max-w-3xl leading-relaxed font-light"
+          >
+            Project description goes here
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- 2. EDITORIAL MAIN LAYOUT: Image + Info Cards -->
+      <section class="px-6 md:px-16 py-20 md:py-28">
+        <div class="max-w-7xl mx-auto">
+          <div
+            class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 items-start"
+          >
+            <!-- Left: Large Landscape Hero Image -->
+            <div
+              class="fade-up"
+              style="opacity: 0; animation: fadeUp 0.8s ease-out 0.3s forwards"
+            >
+              <div
+                class="overflow-hidden rounded-2xl bg-zinc-900 shadow-2xl h-96 md:h-full md:min-h-[500px] cursor-pointer group"
+              >
+                <img
+                  id="project-main-image"
+                  src=""
+                  alt="Hero Image"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+              </div>
+            </div>
+
+            <!-- Right: Stacked Info Cards -->
+            <div
+              class="space-y-6 fade-up"
+              style="opacity: 0; animation: fadeUp 0.8s ease-out 0.4s forwards"
+            >
+              <!-- Card 1: My Role -->
+              <div
+                class="bg-zinc-900/40 backdrop-blur border border-zinc-800 rounded-2xl p-6 md:p-8 hover:bg-zinc-900/60 transition-all duration-500 hover:-translate-y-2"
+              >
+                <h3
+                  class="text-xs uppercase tracking-[0.3em] text-zinc-500 mb-4"
+                >
+                  My Role
+                </h3>
+                <ul id="project-roles-list" class="space-y-2">
+                  <li class="text-white font-medium">— Role item</li>
+                </ul>
+              </div>
+
+              <!-- Card 2: Tools Used -->
+              <div
+                class="bg-zinc-900/40 backdrop-blur border border-zinc-800 rounded-2xl p-6 md:p-8 hover:bg-zinc-900/60 transition-all duration-500 hover:-translate-y-2"
+              >
+                <h3
+                  class="text-xs uppercase tracking-[0.3em] text-zinc-500 mb-4"
+                >
+                  Tools Used
+                </h3>
+                <p
+                  id="project-tools"
+                  class="text-zinc-300 text-sm leading-relaxed font-light"
+                >
+                  Tools list
+                </p>
+              </div>
+
+              <!-- Card 3: Year & Status -->
+              <div
+                class="bg-zinc-900/40 backdrop-blur border border-zinc-800 rounded-2xl p-6 md:p-8 hover:bg-zinc-900/60 transition-all duration-500 hover:-translate-y-2"
+              >
+                <h3
+                  class="text-xs uppercase tracking-[0.3em] text-zinc-500 mb-4"
+                >
+                  Year & Status
+                </h3>
+                <p
+                  id="project-year-status"
+                  class="text-white font-medium text-lg"
+                >
+                  2025
+                </p>
+                <p id="project-tag" class="text-zinc-400 text-sm mt-2">
+                  Status tag
+                </p>
+              </div>
+
+              <!-- Links -->
+              <div id="project-links" class="flex gap-3 pt-4">
+                <!-- Links go here -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. HORIZONTAL SCROLLING GALLERY -->
+      <section class="px-6 md:px-16 py-20 md:py-28 border-t border-zinc-900">
+        <div class="max-w-7xl mx-auto">
+          <h2
+            class="text-xs uppercase tracking-[0.5em] text-zinc-500 mb-12 fade-up"
+            style="opacity: 0; animation: fadeUp 0.8s ease-out 0.2s forwards"
+          >
+            Project Gallery
+          </h2>
+          <div
+            class="fade-up"
+            style="opacity: 0; animation: fadeUp 0.8s ease-out 0.3s forwards"
+          >
+            <div
+              id="project-gallery"
+              class="grid gap-6"
+              style="grid-template-columns: repeat(5, 1fr)"
+            >
+              <!-- Gallery items grid 5 columns -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. PROJECT PROCESS SECTION -->
+      <section class="px-6 md:px-16 py-20 md:py-28 border-t border-zinc-900">
+        <div class="max-w-7xl mx-auto">
+          <h2
+            class="text-xs uppercase tracking-[0.5em] text-zinc-500 mb-16 fade-up"
+            style="opacity: 0; animation: fadeUp 0.8s ease-out 0.2s forwards"
+          >
+            Project Process
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Idea -->
+            <div
+              class="fade-up"
+              style="opacity: 0; animation: fadeUp 0.8s ease-out 0.3s forwards"
+            >
+              <div
+                class="bg-zinc-900/40 backdrop-blur border border-zinc-800 rounded-2xl p-8 hover:bg-zinc-900/60 transition-all duration-500 hover:-translate-y-2 h-full"
+              >
+                <div class="text-3xl font-black text-zinc-700 mb-6">01</div>
+                <h3 class="text-lg font-bold uppercase tracking-wide mb-4">
+                  Idea
+                </h3>
+                <p
+                  id="process-idea"
+                  class="text-zinc-400 text-sm leading-relaxed"
+                >
+                  Ideation and planning phase
+                </p>
+              </div>
+            </div>
+
+            <!-- Development -->
+            <div
+              class="fade-up"
+              style="opacity: 0; animation: fadeUp 0.8s ease-out 0.4s forwards"
+            >
+              <div
+                class="bg-zinc-900/40 backdrop-blur border border-zinc-800 rounded-2xl p-8 hover:bg-zinc-900/60 transition-all duration-500 hover:-translate-y-2 h-full"
+              >
+                <div class="text-3xl font-black text-zinc-700 mb-6">02</div>
+                <h3 class="text-lg font-bold uppercase tracking-wide mb-4">
+                  Development
+                </h3>
+                <p
+                  id="process-dev"
+                  class="text-zinc-400 text-sm leading-relaxed"
+                >
+                  Building and implementation
+                </p>
+              </div>
+            </div>
+
+            <!-- Challenges -->
+            <div
+              class="fade-up"
+              style="opacity: 0; animation: fadeUp 0.8s ease-out 0.5s forwards"
+            >
+              <div
+                class="bg-zinc-900/40 backdrop-blur border border-zinc-800 rounded-2xl p-8 hover:bg-zinc-900/60 transition-all duration-500 hover:-translate-y-2 h-full"
+              >
+                <div class="text-3xl font-black text-zinc-700 mb-6">03</div>
+                <h3 class="text-lg font-bold uppercase tracking-wide mb-4">
+                  Challenges
+                </h3>
+                <p
+                  id="project-challenge"
+                  class="text-zinc-400 text-sm leading-relaxed"
+                >
+                  Obstacles and solutions
+                </p>
+              </div>
+            </div>
+
+            <!-- Final Result -->
+            <div
+              class="fade-up"
+              style="opacity: 0; animation: fadeUp 0.8s ease-out 0.6s forwards"
+            >
+              <div
+                class="bg-zinc-900/40 backdrop-blur border border-zinc-800 rounded-2xl p-8 hover:bg-zinc-900/60 transition-all duration-500 hover:-translate-y-2 h-full"
+              >
+                <div class="text-3xl font-black text-zinc-700 mb-6">04</div>
+                <h3 class="text-lg font-bold uppercase tracking-wide mb-4">
+                  Final Result
+                </h3>
+                <p class="text-zinc-400 text-sm leading-relaxed">
+                  Outcomes and learnings
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-20 px-6 md:px-16 border-t border-zinc-900 text-center">
+      <a href="projects.html" class="inline-block group">
+        <h3
+          class="text-4xl md:text-6xl font-black uppercase tracking-tighter group-hover:text-zinc-500 transition-colors"
+        >
+          BACK TO PROJECTS
+        </h3>
+      </a>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div
+      id="lightbox-modal"
+      class="hidden fixed inset-0 z-50 bg-black/90 backdrop-blur-sm flex items-center justify-center p-4"
+    >
+      <div
+        class="relative max-w-4xl max-h-[90vh] w-full h-full flex items-center justify-center"
+      >
+        <img
+          id="lightbox-image"
+          src=""
+          alt="Lightbox Preview"
+          class="max-w-full max-h-full object-contain rounded-lg"
+        />
+        <button
+          id="lightbox-close"
+          class="absolute top-4 right-4 w-10 h-10 bg-white/10 hover:bg-white/20 text-white rounded-full flex items-center justify-center transition-all text-2xl"
+          aria-label="Close"
+        >
+          ×
+        </button>
+        <button
+          id="lightbox-prev"
+          class="absolute left-4 w-10 h-10 bg-white/10 hover:bg-white/20 text-white rounded-full flex items-center justify-center transition-all text-2xl"
+          aria-label="Previous"
+        >
+          ‹
+        </button>
+        <button
+          id="lightbox-next"
+          class="absolute right-4 w-10 h-10 bg-white/10 hover:bg-white/20 text-white rounded-full flex items-center justify-center transition-all text-2xl"
+          aria-label="Next"
+        >
+          ›
+        </button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+      function loadProjectDetail() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const projectId = urlParams.get("id");
+
+        if (typeof projectData === "undefined") {
+          console.warn("projectData belum tersedia, tunggu 100ms lagi...");
+          setTimeout(loadProjectDetail, 100);
+          return;
+        }
+
+        if (projectId && projectData[projectId]) {
+          const data = projectData[projectId];
+          console.log("Loading project:", projectId, data);
+
+          // ===== HERO SECTION =====
+          document.getElementById("project-title").textContent = data.title;
+          document.getElementById("project-category-year").textContent =
+            `${data.category} • ${data.year}`;
+          document.getElementById("project-description").textContent =
+            data.description;
+          document.getElementById("project-main-image").src = data.mainImage;
+
+          // ===== INFO CARDS =====
+          // My Role
+          const rolesList = document.getElementById("project-roles-list");
+          rolesList.innerHTML = ""; // Clear placeholder
+          data.roles.forEach((role) => {
+            const li = document.createElement("li");
+            li.className = "text-white font-medium";
+            li.textContent = `— ${role}`;
+            rolesList.appendChild(li);
+          });
+
+          // Tools
+          document.getElementById("project-tools").textContent =
+            data.tools.join(" • ");
+
+          // Year & Status
+          document.getElementById("project-year-status").textContent =
+            data.year;
+          document.getElementById("project-tag").textContent = data.tag;
+
+          // ===== HORIZONTAL SCROLL GALLERY =====
+          const galleryContainer = document.getElementById("project-gallery");
+          galleryContainer.innerHTML = "";
+
+          // Store for lightbox
+          window.allGalleryImages = data.gallery;
+          let currentLightboxIndex = 0;
+
+          data.gallery.forEach((img, index) => {
+            const div = document.createElement("div");
+            div.className =
+              "overflow-hidden rounded-xl bg-zinc-900 shadow-lg cursor-pointer group";
+            div.style.width = "100%";
+            div.style.height = "300px";
+            div.style.aspectRatio = "1 / 1";
+
+            div.innerHTML = `
+              <img 
+                src="${img}" 
+                alt="Gallery image ${index + 1}"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              />
+            `;
+
+            div.addEventListener("click", () => openLightbox(index));
+            galleryContainer.appendChild(div);
+          });
+
+          // ===== PROCESS SECTION =====
+          document.getElementById("process-idea").textContent =
+            "Planning the project scope, objectives, and technical requirements";
+          document.getElementById("process-dev").textContent =
+            "Building and implementing the solution with attention to detail";
+          document.getElementById("project-challenge").textContent =
+            data.challenge;
+          // Final result stays generic for now
+
+          // ===== LIGHTBOX FUNCTIONALITY =====
+          window.openLightbox = function (index) {
+            currentLightboxIndex = index;
+            const modal = document.getElementById("lightbox-modal");
+            const img = document.getElementById("lightbox-image");
+            img.src = window.allGalleryImages[index];
+            modal.classList.remove("hidden");
+            document.body.style.overflow = "hidden";
+          };
+
+          window.closeLightbox = function () {
+            const modal = document.getElementById("lightbox-modal");
+            modal.classList.add("hidden");
+            document.body.style.overflow = "";
+          };
+
+          window.nextImage = function () {
+            currentLightboxIndex =
+              (currentLightboxIndex + 1) % window.allGalleryImages.length;
+            document.getElementById("lightbox-image").src =
+              window.allGalleryImages[currentLightboxIndex];
+          };
+
+          window.prevImage = function () {
+            currentLightboxIndex =
+              (currentLightboxIndex - 1 + window.allGalleryImages.length) %
+              window.allGalleryImages.length;
+            document.getElementById("lightbox-image").src =
+              window.allGalleryImages[currentLightboxIndex];
+          };
+
+          // Lightbox event listeners
+          document
+            .getElementById("lightbox-close")
+            .addEventListener("click", closeLightbox);
+          document
+            .getElementById("lightbox-next")
+            .addEventListener("click", nextImage);
+          document
+            .getElementById("lightbox-prev")
+            .addEventListener("click", prevImage);
+
+          // Close on background click
+          document
+            .getElementById("lightbox-modal")
+            .addEventListener("click", (e) => {
+              if (e.target.id === "lightbox-modal") closeLightbox();
+            });
+
+          // Keyboard navigation
+          document.addEventListener("keydown", (e) => {
+            const modal = document.getElementById("lightbox-modal");
+            if (modal.classList.contains("hidden")) return;
+            if (e.key === "ArrowRight") nextImage();
+            if (e.key === "ArrowLeft") prevImage();
+            if (e.key === "Escape") closeLightbox();
+          });
+
+          // ===== LINKS =====
+          const linksContainer = document.getElementById("project-links");
+          linksContainer.innerHTML = "";
+          Object.keys(data.links).forEach((key) => {
+            const a = document.createElement("a");
+            a.href = data.links[key];
+            a.className =
+              "px-6 py-3 bg-zinc-900 hover:bg-white hover:text-black text-xs uppercase tracking-widest font-bold transition-all rounded-lg border border-zinc-800";
+            a.textContent = key;
+            linksContainer.appendChild(a);
+          });
+
+          document.title = `${data.title} | Okan Sandi`;
+        } else {
+          console.error("Project ID:", projectId, "- Data:", projectData);
+        }
+      }
+
+      // Jalankan saat DOM siap
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", loadProjectDetail);
+      } else {
+        loadProjectDetail();
+      }
+    </script>
+  </body>
+</html>
