@@ -280,7 +280,8 @@
               style="opacity: 0; animation: fadeUp 0.8s ease-out 0.3s forwards"
             >
               <div
-                class="overflow-hidden rounded-2xl bg-zinc-900 shadow-2xl h-96 md:h-full md:min-h-[500px] cursor-pointer group"
+                class="overflow-hidden rounded-2xl bg-zinc-900 shadow-2xl cursor-pointer group"
+                style="aspect-ratio: 16 / 9"
               >
                 <img
                   id="project-main-image"
@@ -372,9 +373,9 @@
             <div
               id="project-gallery"
               class="grid gap-6"
-              style="grid-template-columns: repeat(5, 1fr)"
+              style="grid-template-columns: repeat(4, 1fr)"
             >
-              <!-- Gallery items grid 5 columns -->
+              <!-- Gallery items grid 4 columns -->
             </div>
           </div>
         </div>
@@ -581,8 +582,8 @@
             div.className =
               "overflow-hidden rounded-xl bg-zinc-900 shadow-lg cursor-pointer group";
             div.style.width = "100%";
-            div.style.height = "300px";
-            div.style.aspectRatio = "1 / 1";
+            div.style.height = "auto";
+            div.style.aspectRatio = "16 / 9";
 
             div.innerHTML = `
               <img 
