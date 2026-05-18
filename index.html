@@ -800,177 +800,229 @@
 </section>
 
 <!-- CV SECTION -->
+<!-- CV SECTION — Drop-in replacement untuk index.html -->
+<!-- Ganti seluruh section id="cv" yang lama dengan kode ini -->
+
 <section id="cv" class="min-h-screen bg-black text-white py-32 border-t border-zinc-900">
   <div class="px-6 md:px-16">
-    <div class="max-w-7xl mx-auto mb-16">
-      <p class="text-[10px] tracking-[0.4em] uppercase text-zinc-600 mb-6">Professional Document</p>
-      <h2 class="text-6xl md:text-7xl lg:text-8xl font-black uppercase tracking-tight mb-4 leading-none">
-        Curriculum <br />
-        <span class="text-outline italic font-serif">Vitae.</span>
-      </h2>
+
+    <!-- Header -->
+    <div class="max-w-7xl mx-auto mb-16 flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+      <div>
+        <p class="text-[10px] tracking-[0.4em] uppercase text-zinc-600 mb-6">Professional Document</p>
+        <h2 class="text-6xl md:text-7xl lg:text-8xl font-black uppercase tracking-tight mb-4 leading-none">
+          Curriculum <br />
+          <span class="text-outline italic font-serif">Vitae.</span>
+        </h2>
+      </div>
+      <!-- Tombol Download PDF -->
+      <a
+        href="foto.jpg/cv.jpeg"
+        download="CV-Okan-Sandi-Kurniawan.pdf"
+        class="group inline-flex items-center gap-3 px-6 py-3 border border-zinc-700 rounded-full text-[10px] uppercase tracking-[0.2em] text-zinc-400 hover:border-white hover:text-white transition-all duration-300 self-start md:self-end"
+      >
+        <svg class="w-3.5 h-3.5 group-hover:translate-y-0.5 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+        </svg>
+        Download PDF
+      </a>
     </div>
 
-    <!-- CV Container: 2 Column Layout -->
-    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-16">
-      <!-- LEFT SIDEBAR -->
-      <div class="md:col-span-1">
-        <!-- Profile Photo -->
-        <div class="mb-8 overflow-hidden rounded-2xl bg-gradient-to-br from-blue-900 to-slate-900 shadow-lg aspect-[3/4]">
-          <img src="foto.jpg/cv.jpeg" alt="Okan Sandi" class="w-full h-full object-cover">
-        </div>
+    <!-- CV Card Container -->
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-0 border border-zinc-800 rounded-3xl overflow-hidden">
 
-        <!-- CONTACT -->
-        <div class="mb-12 pb-8 border-b border-zinc-800">
-          <h3 class="text-xs uppercase tracking-widest font-bold text-white mb-6">Contact</h3>
-          <div class="space-y-4 text-xs text-zinc-400">
-            <div>
-              <p class="text-zinc-600 uppercase tracking-widest text-[9px] mb-1">Phone</p>
-              <p class="text-white">+62 895 1330 1989</p>
-            </div>
-            <div>
-              <p class="text-zinc-600 uppercase tracking-widest text-[9px] mb-1">Email</p>
-              <p class="text-white break-all">okansandi65@gmail.com</p>
-            </div>
-            <div>
-              <p class="text-zinc-600 uppercase tracking-widest text-[9px] mb-1">Location</p>
-              <p class="text-white">Semarang, Indonesia</p>
-            </div>
-            <div>
+        <!-- ── SIDEBAR KIRI ── -->
+        <div class="md:col-span-1 bg-zinc-950 border-r border-zinc-800 flex flex-col">
+
+          <!-- Foto -->
+          <div class="p-6 pb-0">
+            <div class="w-full aspect-[3/4] bg-zinc-900 rounded-2xl overflow-hidden">
+              <img
+                src="foto.jpg/cv.jpeg"
+                alt="Okan Sandi Kurniawan"
+                class="w-full h-full object-cover transition-all duration-700"
+
+                onerror="this.style.display='none'; this.parentNode.innerHTML='<div style=\'display:flex;align-items:center;justify-content:center;height:100%;\'><span style=\'font-size:64px;font-weight:900;color:#222;letter-spacing:-4px;\'>OS</span></div>'"
+              >
             </div>
           </div>
-        </div>
 
-        <!-- EDUCATION -->
-        <div class="mb-12 pb-8 border-b border-zinc-800">
-          <h3 class="text-xs uppercase tracking-widest font-bold text-white mb-6">Education</h3>
-          <div class="space-y-4 text-xs">
-            <div>
-              <p class="text-zinc-600 uppercase tracking-widest text-[9px] mb-1">2025 - Present</p>
-              <p class="font-bold text-white">SMK Negeri 7 Semarang</p>
-              <p class="text-zinc-500 text-[10px] mt-1">Information Technology (SIJA)</p>
-            </div>
-            <div>
-              <p class="text-zinc-600 uppercase tracking-widest text-[9px] mb-1">2021 - 2024</p>
-              <p class="font-bold text-white">SMP Negeri 27 Semarang</p>
-              <p class="text-zinc-500 text-[10px] mt-1">Junior High School</p>
-            </div>
-            <div>
-              <p class="text-zinc-600 uppercase tracking-widest text-[9px] mb-1">2015 - 2021</p>
-              <p class="font-bold text-white">SD Negeri Srondol Kulon 02</p>
-              <p class="text-zinc-500 text-[10px] mt-1">Elementary School</p>
-            </div>
-            <div>
-              <p class="text-zinc-600 uppercase tracking-widest text-[9px] mb-1">2013 - 2015</p>
-              <p class="font-bold text-white">TK PGRI 24 Semarang</p>
-              <p class="text-zinc-500 text-[10px] mt-1">Kindergarten</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- SKILLS -->
-        <div class="mb-12 pb-8 border-b border-zinc-800">
-          <h3 class="text-xs uppercase tracking-widest font-bold text-white mb-6">Skills</h3>
-          <div class="space-y-3 text-xs">
-            <div>
-              <p class="text-zinc-600 uppercase tracking-widest text-[9px] mb-2 font-medium">Technical</p>
-              <div class="space-y-1 text-zinc-300 text-[10px]">
-                <p>• HTML/CSS</p>
-                <p>• JavaScript</p>
-                <p>• Tailwind CSS</p>
-                <p>• Arduino/C++</p>
-                <p>• ESP32 IoT</p>
+          <!-- Kontak -->
+          <div class="p-6 border-b border-zinc-800/50">
+            <p class="text-[9px] tracking-[0.35em] uppercase text-zinc-600 mb-5 font-bold">Contact</p>
+            <div class="space-y-4">
+              <div>
+                <p class="text-[8px] text-zinc-700 uppercase tracking-[0.2em] mb-1">Phone</p>
+                <p class="text-xs text-zinc-300">+62 895 1330 1989</p>
               </div>
-            </div>
-            <div>
-              <p class="text-zinc-600 uppercase tracking-widest text-[9px] mb-2 font-medium">Design</p>
-              <div class="space-y-1 text-zinc-300 text-[10px]">
-                <p>• Figma</p>
-                <p>• UI/UX Design</p>
-                <p>• Canva</p>
+              <div>
+                <p class="text-[8px] text-zinc-700 uppercase tracking-[0.2em] mb-1">Email</p>
+                <p class="text-xs text-zinc-300 break-all">okansandi65@gmail.com</p>
+              </div>
+              <div>
+                <p class="text-[8px] text-zinc-700 uppercase tracking-[0.2em] mb-1">Location</p>
+                <p class="text-xs text-zinc-300">Semarang, Indonesia</p>
               </div>
             </div>
           </div>
-        </div>
 
-
-      </div>
-
-      <!-- RIGHT CONTENT -->
-      <div class="md:col-span-2 space-y-12">
-        <!-- NAME HEADER -->
-        <div class="pb-8 border-b border-zinc-800">
-          <h1 class="text-4xl md:text-5xl font-black uppercase tracking-tight text-white mb-2">
-            Okan Sandi Kurniawan
-          </h1>
-          <p class="text-sm text-zinc-400 uppercase tracking-widest">Student of SIJA • Web Developer • IoT Enthusiast</p>
-        </div>
-
-        <!-- PROFILE -->
-        <div>
-          <h2 class="text-xs uppercase tracking-widest font-bold text-white mb-4">Profile</h2>
-          <p class="text-sm text-zinc-300 leading-relaxed">
-            Halo, saya Okan Sandi Kurniawan, biasa dipanggil Okan. Saya lahir pada 3 Oktober 2008 dan saat ini bersekolah di SMK Negeri 7 Semarang (STM Pembangunan) jurusan Sistem Informasi Jaringan dan Aplikasi (SIJA).
-
-Hobi saya adalah membaca buku, lebih spesifiknya buku tentang psikologi. Saya memiliki minat di bidang web development, UI/UX design, dan Internet of Things (IoT).
-          </p>
-        </div>
-
-        <!-- WORK EXPERIENCE & PROJECTS -->
-        <div>
-          <h2 class="text-xs uppercase tracking-widest font-bold text-white mb-6">Experience & Projects</h2>
-          <div class="space-y-6">
-            <!-- IoT Project -->
-            <div class="border-l-2 border-zinc-700 pl-4">
-              <div class="flex justify-between items-start mb-2">
-                <h3 class="font-bold text-white">Smart Building & Parking IoT</h3>
-                <span class="text-xs text-zinc-600 font-mono">2025</span>
+          <!-- Pendidikan -->
+          <div class="p-6 border-b border-zinc-800/50">
+            <p class="text-[9px] tracking-[0.35em] uppercase text-zinc-600 mb-5 font-bold">Education</p>
+            <div class="space-y-5">
+              <div class="relative pl-3 border-l border-zinc-800">
+                <p class="text-[8px] text-zinc-700 uppercase tracking-[0.15em] mb-1">2024 — Now</p>
+                <p class="text-xs font-bold text-white leading-tight">SMK Negeri 7 Semarang</p>
+                <p class="text-[10px] text-zinc-500 mt-0.5">SIJA</p>
               </div>
-              <p class="text-xs text-zinc-500 mb-2">Project Leader • IoT Developer • Hardware Assembly</p>
-              <p class="text-xs text-zinc-400 leading-relaxed">
-Proyek Internet of Things (IoT) yang dibuat pada tahun 2025 untuk monitoring area parkir dan kontrol otomatis pada bangunan menggunakan ESP32 dan beberapa sensor. Sistem ini dilengkapi visualisasi data secara real-time untuk mempermudah pemantauan.              </p>
-            </div>
-
-            <!-- Web Project -->
-            <div class="border-l-2 border-zinc-700 pl-4">
-              <div class="flex justify-between items-start mb-2">
-                <h3 class="font-bold text-white">Web Film & Series</h3>
-                <span class="text-xs text-zinc-600 font-mono">2026</span>
+              <div class="relative pl-3 border-l border-zinc-900">
+                <p class="text-[8px] text-zinc-700 uppercase tracking-[0.15em] mb-1">2021 — 2024</p>
+                <p class="text-xs font-bold text-zinc-300 leading-tight">SMP Negeri 27 Semarang</p>
+                <p class="text-[10px] text-zinc-600 mt-0.5">Junior High School</p>
               </div>
-              <p class="text-xs text-zinc-500 mb-2">Frontend Developer</p>
-              <p class="text-xs text-zinc-400 leading-relaxed">
-Website statis yang berisi informasi mengenai film dan series Indonesia tahun 2025–2026. Dibuat menggunakan HTML, Tailwind CSS, dan JavaScript dengan desain responsif dan tampilan antarmuka modern.            </div>
-
-
-          </div>
-        </div>
-
-        <!-- CERTIFICATIONS & ACHIEVEMENTS -->
-        <div>
-          <h2 class="text-xs uppercase tracking-widest font-bold text-white mb-6">Certifications & Awards</h2>
-          <div class="grid grid-cols-2 gap-4">
-            <div>
-              <p class="font-bold text-white text-sm">IT Essential</p>
-              <p class="text-xs text-zinc-500">Cisco Academy • 2024</p>
-            </div>
-            <div>
-              <p class="font-bold text-white text-sm">Math City Map</p>
-              <p class="text-xs text-zinc-500">Competition • 2024</p>
-            </div>
-            <div>
-              <p class="font-bold text-white text-sm">Solve Education</p>
-              <p class="text-xs text-zinc-500">Certificate • 2024</p>
-            </div>
-            <div>
-              <p class="font-bold text-white text-sm">Hour of Code</p>
-              <p class="text-xs text-zinc-500">Certification • 2024</p>
+              <div class="relative pl-3 border-l border-zinc-900">
+                <p class="text-[8px] text-zinc-700 uppercase tracking-[0.15em] mb-1">2015 — 2021</p>
+                <p class="text-xs font-bold text-zinc-300 leading-tight">SD Negeri Srondol Kulon 02</p>
+                <p class="text-[10px] text-zinc-600 mt-0.5">Elementary School</p>
+              </div>
+              <div class="relative pl-3 border-l border-zinc-900">
+                <p class="text-[8px] text-zinc-700 uppercase tracking-[0.15em] mb-1">2013 — 2015</p>
+                <p class="text-xs font-bold text-zinc-300 leading-tight">TK PGRI 24 Semarang</p>
+                <p class="text-[10px] text-zinc-600 mt-0.5">Kindergarten</p>
+              </div>
             </div>
           </div>
+
+          <!-- Skills -->
+          <div class="p-6 flex-1">
+            <p class="text-[9px] tracking-[0.35em] uppercase text-zinc-600 mb-5 font-bold">Skills</p>
+            <div class="space-y-5">
+              <div>
+                <p class="text-[8px] text-zinc-700 uppercase tracking-[0.2em] mb-3">Technical</p>
+                <div class="flex flex-wrap gap-1.5">
+                  <span class="text-[9px] px-2 py-1 border border-zinc-800 rounded-md text-zinc-500">HTML/CSS</span>
+                  <span class="text-[9px] px-2 py-1 border border-zinc-800 rounded-md text-zinc-500">JavaScript</span>
+                  <span class="text-[9px] px-2 py-1 border border-zinc-800 rounded-md text-zinc-500">Tailwind CSS</span>
+                  <span class="text-[9px] px-2 py-1 border border-zinc-800 rounded-md text-zinc-500">Arduino/C++</span>
+                  <span class="text-[9px] px-2 py-1 border border-zinc-800 rounded-md text-zinc-500">ESP32 IoT</span>
+                </div>
+              </div>
+              <div>
+                <p class="text-[8px] text-zinc-700 uppercase tracking-[0.2em] mb-3">Design</p>
+                <div class="flex flex-wrap gap-1.5">
+                  <span class="text-[9px] px-2 py-1 border border-zinc-800 rounded-md text-zinc-500">Figma</span>
+                  <span class="text-[9px] px-2 py-1 border border-zinc-800 rounded-md text-zinc-500">UI/UX Design</span>
+                  <span class="text-[9px] px-2 py-1 border border-zinc-800 rounded-md text-zinc-500">Canva</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- ── MAIN CONTENT KANAN ── -->
+        <div class="md:col-span-2 bg-[#0a0a0a] flex flex-col">
+
+          <!-- Nama & Role -->
+          <div class="p-8 pb-6 border-b border-zinc-800/50">
+            <h1 class="text-3xl md:text-4xl font-black uppercase tracking-tight text-white mb-2 leading-tight">
+              Okan Sandi Kurniawan
+            </h1>
+            <p class="text-[10px] text-zinc-500 uppercase tracking-[0.2em]">
+              Student of SIJA &nbsp;·&nbsp; Web Developer &nbsp;·&nbsp; IoT Enthusiast
+            </p>
+          </div>
+
+          <!-- Profile -->
+          <div class="p-8 pb-6 border-b border-zinc-800/50">
+            <p class="text-[9px] tracking-[0.35em] uppercase text-zinc-600 mb-4 font-bold">Profile</p>
+            <p class="text-sm text-zinc-400 leading-relaxed">
+              Halo, saya Okan Sandi Kurniawan, biasa dipanggil Okan. Saya lahir pada 3 Oktober 2008 dan saat ini bersekolah di SMK Negeri 7 Semarang (STM Pembangunan) jurusan Sistem Informasi Jaringan dan Aplikasi (SIJA).
+              Hobi saya adalah membaca buku, lebih spesifiknya buku tentang psikologi. Saya memiliki minat di bidang web development, UI/UX design, dan Internet of Things (IoT).
+            </p>
+          </div>
+
+          <!-- Experience & Projects -->
+          <div class="p-8 pb-6 border-b border-zinc-800/50">
+            <p class="text-[9px] tracking-[0.35em] uppercase text-zinc-600 mb-6 font-bold">Experience & Projects</p>
+            <div class="space-y-8">
+
+              <!-- IoT -->
+              <div class="grid grid-cols-[1fr_auto] gap-4">
+                <div class="border-l-2 border-zinc-700 pl-5">
+                  <h3 class="font-bold text-white text-sm mb-1">Smart Building & Parking IoT</h3>
+                  <p class="text-[10px] text-zinc-600 mb-3 uppercase tracking-wider">Project Leader · IoT Developer · Hardware Assembly</p>
+                  <p class="text-xs text-zinc-500 leading-relaxed">
+                    Proyek Internet of Things (IoT) yang dibuat pada tahun 2025 untuk monitoring area parkir dan kontrol otomatis pada bangunan menggunakan ESP32 dan beberapa sensor. Sistem ini dilengkapi visualisasi data secara real-time untuk mempermudah pemantauan.
+                  </p>
+                </div>
+                <span class="text-xs text-zinc-700 font-mono self-start pt-0.5">2025</span>
+              </div>
+
+              <!-- Web -->
+              <div class="grid grid-cols-[1fr_auto] gap-4">
+                <div class="border-l-2 border-zinc-800 pl-5">
+                  <h3 class="font-bold text-white text-sm mb-1">Web Film & Series</h3>
+                  <p class="text-[10px] text-zinc-600 mb-3 uppercase tracking-wider">Frontend Developer</p>
+                  <p class="text-xs text-zinc-500 leading-relaxed">
+                    Website statis yang berisi informasi mengenai film dan series Indonesia tahun 2025–2026. Dibuat menggunakan HTML, Tailwind CSS, dan JavaScript dengan desain responsif dan tampilan antarmuka modern.
+                  </p>
+                </div>
+                <span class="text-xs text-zinc-700 font-mono self-start pt-0.5">2026</span>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Certifications -->
+          <div class="p-8 flex-1">
+            <p class="text-[9px] tracking-[0.35em] uppercase text-zinc-600 mb-6 font-bold">Certifications & Awards</p>
+            <div class="grid grid-cols-2 gap-3 mb-8">
+              <div class="border border-zinc-800/60 rounded-xl p-4 hover:border-zinc-600 transition-colors duration-300">
+                <p class="font-bold text-white text-sm mb-1">IT Essential</p>
+                <p class="text-[10px] text-zinc-600">Cisco Academy · 2024</p>
+              </div>
+              <div class="border border-zinc-800/60 rounded-xl p-4 hover:border-zinc-600 transition-colors duration-300">
+                <p class="font-bold text-white text-sm mb-1">Math City Map</p>
+                <p class="text-[10px] text-zinc-600">Competition · 2024</p>
+              </div>
+              <div class="border border-zinc-800/60 rounded-xl p-4 hover:border-zinc-600 transition-colors duration-300">
+                <p class="font-bold text-white text-sm mb-1">Solve Education</p>
+                <p class="text-[10px] text-zinc-600">Certificate · 2024</p>
+              </div>
+              <div class="border border-zinc-800/60 rounded-xl p-4 hover:border-zinc-600 transition-colors duration-300">
+                <p class="font-bold text-white text-sm mb-1">Hour of Code</p>
+                <p class="text-[10px] text-zinc-600">Certification · 2024</p>
+              </div>
+            </div>
+
+            <!-- Quote — hanya di sini, section terpisah di bawah CV dihapus -->
+            <div class="border border-zinc-800/40 rounded-2xl p-6 bg-zinc-900/20">
+              <p class="text-sm md:text-base italic text-zinc-400 leading-relaxed text-center font-light">
+                "Proses mendaki gunung sering kali lebih bermakna daripada mencapai puncaknya."
+              </p>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
+
   </div>
 </section>
 
+<!--
+  PENTING: Setelah section ini, HAPUS section quote yang terpisah di bawah:
+  
+  <section class="py-20 md:py-32 px-6 md:px-16 border-t border-zinc-900">
+    <div class="max-w-4xl mx-auto text-center">
+      <blockquote ...>"Proses mendaki gunung..."</blockquote>
+    </div>
+  </section>
+  
+  Quote sekarang sudah ada di dalam CV card di atas, tidak perlu duplikat.
+-->
 <!-- FLOATING IMAGE PREVIEW -->
 <div id="hover-preview">
     <div class="preview-container">
@@ -994,5 +1046,31 @@ Website statis yang berisi informasi mengenai film dan series Indonesia tahun 20
   </main>
 
   <script src="scriptt.js"></script>
+  
+  <!-- Page Transition Script -->
+  <script>
+    // Fade out saat klik link
+    document.querySelectorAll('a[href]').forEach(link => {
+      link.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        if (href.startsWith('#') || href.startsWith('http')) return;
+        
+        e.preventDefault();
+        document.body.style.transition = 'opacity 0.4s ease';
+        document.body.style.opacity = '0';
+        
+        setTimeout(() => {
+          window.location.href = href;
+        }, 400);
+      });
+    });
+
+    // Fade in saat halaman load
+    document.body.style.opacity = '0';
+    window.addEventListener('load', () => {
+      document.body.style.transition = 'opacity 0.5s ease';
+      document.body.style.opacity = '1';
+    });
+  </script>
 </body>
 </html>

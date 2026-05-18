@@ -395,100 +395,6 @@
           </div>
         </div>
       </section>
-
-      <!-- 4. PROJECT PROCESS SECTION -->
-      <section class="px-6 md:px-16 py-20 md:py-28 border-t border-zinc-900">
-        <div class="max-w-7xl mx-auto">
-          <h2
-            class="text-xs uppercase tracking-[0.5em] text-zinc-500 mb-16 fade-up"
-            style="opacity: 0; animation: fadeUp 0.8s ease-out 0.2s forwards"
-          >
-            Project Process
-          </h2>
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <!-- Idea -->
-            <div
-              class="fade-up"
-              style="opacity: 0; animation: fadeUp 0.8s ease-out 0.3s forwards"
-            >
-              <div
-                class="bg-zinc-900/40 backdrop-blur border border-zinc-800 rounded-2xl p-8 hover:bg-zinc-900/60 transition-all duration-500 hover:-translate-y-2 h-full"
-              >
-                <div class="text-3xl font-black text-zinc-700 mb-6">01</div>
-                <h3 class="text-lg font-bold uppercase tracking-wide mb-4">
-                  Idea
-                </h3>
-                <p
-                  id="process-idea"
-                  class="text-zinc-400 text-sm leading-relaxed"
-                >
-                  Ideation and planning phase
-                </p>
-              </div>
-            </div>
-
-            <!-- Development -->
-            <div
-              class="fade-up"
-              style="opacity: 0; animation: fadeUp 0.8s ease-out 0.4s forwards"
-            >
-              <div
-                class="bg-zinc-900/40 backdrop-blur border border-zinc-800 rounded-2xl p-8 hover:bg-zinc-900/60 transition-all duration-500 hover:-translate-y-2 h-full"
-              >
-                <div class="text-3xl font-black text-zinc-700 mb-6">02</div>
-                <h3 class="text-lg font-bold uppercase tracking-wide mb-4">
-                  Development
-                </h3>
-                <p
-                  id="process-dev"
-                  class="text-zinc-400 text-sm leading-relaxed"
-                >
-                  Building and implementation
-                </p>
-              </div>
-            </div>
-
-            <!-- Challenges -->
-            <div
-              class="fade-up"
-              style="opacity: 0; animation: fadeUp 0.8s ease-out 0.5s forwards"
-            >
-              <div
-                class="bg-zinc-900/40 backdrop-blur border border-zinc-800 rounded-2xl p-8 hover:bg-zinc-900/60 transition-all duration-500 hover:-translate-y-2 h-full"
-              >
-                <div class="text-3xl font-black text-zinc-700 mb-6">03</div>
-                <h3 class="text-lg font-bold uppercase tracking-wide mb-4">
-                  Challenges
-                </h3>
-                <p
-                  id="project-challenge"
-                  class="text-zinc-400 text-sm leading-relaxed"
-                >
-                  Obstacles and solutions
-                </p>
-              </div>
-            </div>
-
-            <!-- Final Result -->
-            <div
-              class="fade-up"
-              style="opacity: 0; animation: fadeUp 0.8s ease-out 0.6s forwards"
-            >
-              <div
-                class="bg-zinc-900/40 backdrop-blur border border-zinc-800 rounded-2xl p-8 hover:bg-zinc-900/60 transition-all duration-500 hover:-translate-y-2 h-full"
-              >
-                <div class="text-3xl font-black text-zinc-700 mb-6">04</div>
-                <h3 class="text-lg font-bold uppercase tracking-wide mb-4">
-                  Final Result
-                </h3>
-                <p class="text-zinc-400 text-sm leading-relaxed">
-                  Outcomes and learnings
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
     </main>
 
     <!-- Footer -->
@@ -703,6 +609,32 @@
       } else {
         loadProjectDetail();
       }
+    </script>
+
+    <!-- Page Transition Script -->
+    <script>
+      // Fade out saat klik link
+      document.querySelectorAll("a[href]").forEach((link) => {
+        link.addEventListener("click", function (e) {
+          const href = this.getAttribute("href");
+          if (href.startsWith("#") || href.startsWith("http")) return;
+
+          e.preventDefault();
+          document.body.style.transition = "opacity 0.4s ease";
+          document.body.style.opacity = "0";
+
+          setTimeout(() => {
+            window.location.href = href;
+          }, 400);
+        });
+      });
+
+      // Fade in saat halaman load
+      document.body.style.opacity = "0";
+      window.addEventListener("load", () => {
+        document.body.style.transition = "opacity 0.5s ease";
+        document.body.style.opacity = "1";
+      });
     </script>
   </body>
 </html>
